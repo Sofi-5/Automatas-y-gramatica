@@ -82,3 +82,40 @@ Ejemplo: `ab`, `aab`, `aaabb`.
 Cada gramática está en un archivo independiente: G1.c, G2.c, ..., G5.c.
 
 Compilación con GCC:
+gcc G1.c -o G1
+Ejecución:
+./G1
+
+---
+
+## Archivos .txt de prueba
+Cada .txt contiene una cadena por línea.
+La cadena vacía se representa con una línea en blanco y se imprime como ε en la salida.
+
+Ejemplo G1.txt:
+
+ε
+0
+1
+010
+0110
+01
+
+## Ejemplo de salida
+
+Ejecutando python G1.py:
+[G1][1] ε => acepta
+[G1][2] 0 => acepta
+[G1][3] 1 => acepta
+[G1][4] 010 => acepta
+[G1][5] 0110 => acepta
+[G1][6] 01 => NO acepta
+
+---
+
+## Conclusiones
+- Python facilita la implementación gracias a sus operaciones de cadenas y lectura de archivos sencilla.
+- C requiere manejo manual de cadenas y cuidado en el tratamiento de caracteres y saltos de línea, pero ofrece control total y eficiencia.
+- Separar cada gramática en un archivo permite modularidad y claridad en la implementación.
+- Usar archivos .txt para las cadenas de entrada asegura pruebas repetibles y automáticas, sin depender de entrada por teclado.
+- Este trabajo refuerza la comprensión de autómatas y gramáticas formales, así como la lógica de conteo y verificación de patrones.
