@@ -14,4 +14,7 @@ def main():
             acepta = ab_o_abb(s)
             veredicto = "acepta" if acepta else "NO acepta"
             mostrar = s if s else "ε"
+
             print(f"[G4][{i}] {mostrar} => {veredicto}")
+
+main()
